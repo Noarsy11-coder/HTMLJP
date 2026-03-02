@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloggIT | Perfil</title>
+
+  <!-- Si quieres seguir usando tu CSS externo, deja esta línea -->
+  <link rel="stylesheet" href="CSSLab3/estilos.css" />
+
+  <!-- Estilo básico integrado para que se vea distinto aunque no tengas CSS -->
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; background: #f6f7fb; color: #111; }
+    header { padding: 28px 18px; background: white; border-bottom: 1px solid #e6e6ef; }
+    .wrap { max-width: 920px; margin: 0 auto; }
+    .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #111; color: #fff; font-size: 12px; }
+    main { padding: 18px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1.1fr 0.9fr; } }
+    .card { background: white; border: 1px solid #e6e6ef; border-radius: 14px; padding: 16px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    h2 { margin: 0; font-size: 16px; opacity: 0.75; font-weight: 600; }
+    ul { margin: 10px 0 0; padding-left: 18px; }
+    .dato { font-weight: 700; }
+    .qa { margin: 0; }
+    .qa li { margin: 10px 0; }
+    .answer { display: block; margin-top: 6px; padding: 10px; border-left: 4px solid #111; background: #f3f4f8; border-radius: 10px; }
+    footer { padding: 18px; }
+    a { color: #111; }
+    .muted { opacity: 0.75; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <span class="tag">Perfil / BloggIT</span>
+      <h1>Valeria Sánchez</h1>
+      <h2>Canal: Desarrollo Web</h2>
+      <p class="muted">Estudiante en el Tec de MTY · Matrícula <span class="dato">A01987654</span></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card">
+        <h3>Sobre mí</h3>
+        <ul>
+          <li>Nací en <span class="dato">Guadalajara, Jal.</span></li>
+          <li>Mi perrhijo se llama <span class="dato">Milo</span> 🐶</li>
+          <li>Mi color favorito es el <span class="dato">azul</span>.</li>
+          <li>Me gusta: UI/UX, videojuegos y cafés fríos.</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h3>Contacto</h3>
+        <p class="muted">Si quieres colaborar o dejar feedback:</p>
+        <p>Email: <a href="mailto:a01987654@tec.mx">a01987654@tec.mx</a></p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:14px;">
+      <h3>Preguntas de CSS (Q&A)</h3>
+      <ol class="qa">
+        <li>
+          Como ingeniero de software, ¿recomiendas usar <code>!important</code>?
+          <span class="answer">
+            Solo como último recurso. Puede romper la cascada y volver el CSS difícil de mantener.
+            Mejor arreglar especificidad, orden o estructura de clases.
+          </span>
+        </li>
+
+        <li>
+          Si pones una imagen de fondo en HTML, ¿por qué debes escogerla con cuidado?
+          <span class="answer">
+            Por rendimiento (peso), legibilidad del texto, tamaños/resolución, y derechos de uso.
+            Ideal: comprimida, con buen contraste y en formato moderno (WebP).
+          </span>
+        </li>
+
+        <li>
+          ¿Cómo eliges unidades entre %, px y pt?
+          <span class="answer">
+            % para layouts fluidos, px para control fino (con cuidado en responsive) y pt casi nunca en web
+            (más para impresión). En web también conviene usar <code>rem</code> para tipografías.
+          </span>
+        </li>
+
+        <li>
+          ¿Por qué CSS minificado mejora rendimiento?
+          <span class="answer">
+            Reduce tamaño del archivo → baja tiempo de descarga y parsing → carga más rápida.
+          </span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="muted">© 2026 · BloggIT</p>
+  </footer>
+</body>
+</html>
